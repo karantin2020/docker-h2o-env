@@ -2,7 +2,7 @@ FROM alpine:3.3
 
 RUN apk update && apk upgrade \
   && apk add libstdc++ openssl \
-  && apk add --no-cache --virtual=build-dependencies ca-certificates \
+  && apk add --no-cache ca-certificates \
   && rm -rf /var/cache/apk/* \
   && mkdir /opt 
 
